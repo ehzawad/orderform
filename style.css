@@ -1,0 +1,47 @@
+.heading_bar h3{
+    background-color: grey;
+    padding: 10px;
+    border-right: 1px solid white;
+    color: white;
+    font-weight: 200;
+}
+#heading h1{
+    font-weight: 200;
+}
+
+
+.row{
+    margin: 0;
+}
+#heading{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.item_bar input{
+    max-height: 43px;
+}
+.item_bar{
+    margin: 20px 0px;
+}
+.price{
+    text-align: center;
+}
+.product_subtotal{
+    border: 4px solid brown;
+    text-align: center;
+}
+#all-content{
+    margin-bottom: 100px;
+}
+.info{
+    background-color: black;
+    color: white;
+    padding-top: 8px;
+    margin-right: 0px;
+    text-align: center;
+}
+#data-heading{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

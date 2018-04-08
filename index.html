@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Order Form</title>
+  </head>
+  <body>
+
+    <div id="heading">
+        <h1>Ava's Sandwich Shop</h1>
+    </div>
+
+    <!-- <div class="container&#45;fluid" id="all&#45;content"> -->
+    <div class="container" id="all-content">
+        <!-- 1st row -->
+        <span class="d-block p-2 bg-primary text-white">
+        <div id="sandwich-heading" class="row heading_bar">
+            <h3 class="col-6">Sandwiches</h3>
+            <h3 class="col-2">Quantity</h3>
+            <h3 class="col-2">x Unit Price</h3>
+            <h3 class="col-2">Totals</h3>
+        </div>
+
+        <div id="sandwich-heading" class="row item_bar">
+            <p class="col-6">The Classic - Slices of your choice of meat* with lettuce, tomato, and cheese.</p>
+            <input type="number" name="item1" id="item1" onfocusout="calculate_all()" class="form-control col-2" name="item_1">
+            <p class="col-2 price">X 4.75</p>
+            <input type="text" id="item1_total" class="form-control col-2" disabled>
+        </div>
+
+        <div id="sandwich-heading" class="row item_bar">
+            <p class="col-6">Croissant Sandwich - Slices of your choice of meat* with lettuce, tomato, and cheese on a croissant.</p>
+            <input type="number" name="item2" id="item2" onfocusout="calculate_all()" class="form-control col-2" name="item_1">
+            <p class="col-2 price">X 5.50</p>
+            <input type="text" id="item2_total" class="form-control col-2" disabled>
+        </div>
+        <div id="sandwich-heading" class="row item_bar">
+            <p class="col-6">Veggie Wrap - Lettuce, tomato, peppers, olives, and cheese in an oversized tortilla wrap.
+                * Meats include chicken, ham, turkey, and roast beef.</p>
+            <input type="number" name="item3" id="item3" onfocusout="calculate_all()" class="form-control col-2" name="item_1">
+            <p class="col-2 price">X 4.50</p>
+            <input type="text" id="item3_total" class="form-control col-2" disabled>
+        </div>
+        </span>
+        <!-- 2nd row -->
+
+        <span class="d-block p-2 bg-dark text-white">
+        <div id="sandwich-heading" class="row heading_bar">
+            <h3 class="col-6">Salads</h3>
+            <h3 class="col-2">Quantity</h3>
+            <h3 class="col-2">x Unit Price</h3>
+            <h3 class="col-2">Totals</h3>
+        </div>
+        <div id="sandwich-heading" class="row item_bar">
+            <p class="col-6">Caesar Salad - A classic salad with Ranch dressing.</p>
+            <input type="number" name="item4" id="item4" onfocusout="calculate_all()" class="form-control col-2" name="item_1">
+            <p class="col-2 price">X 2.50</p>
+            <input type="text" id="item4_total" class="form-control col-2" disabled>
+        </div>
+        <div id="sandwich-heading" class="row item_bar">
+            <p class="col-6">Grilled Chicken Salad - Strips of grilled chicken on top of salad with Ranch dressing.</p>
+            <input type="number" name="item5" id="item5" onfocusout="calculate_all()" class="form-control col-2" name="item_1">
+            <p class="col-2 price">X 3.25</p>
+            <input type="text" id="item5_total" class="form-control col-2" disabled>
+        </div>
+        </span>
+
+        <!-- 3rd row -->
+
+        <span class="d-block p-2 bg-primary text-white">
+        <div id="sandwich-heading" class="row heading_bar">
+            <h3 class="col-6">Beverages</h3>
+            <h3 class="col-2">Quantity</h3>
+            <h3 class="col-2">x Unit Price</h3>
+            <h3 class="col-2">Totals</h3>
+        </div>
+        <div id="sandwich-heading" class="row item_bar">
+            <p class="col-6">Lemonade, Tea, Juices, and Soda.</p>
+            <input type="number" name="item6" id="item6" onfocusout="calculate_all()" class="form-control col-2" name="item_1">
+            <p class="col-2 price">X 1.75</p>
+            <input type="text" id="item6_total" class="form-control col-2" disabled>
+        </div>
+        </span>
+
+        <!-- 4th row -->
+        <span class="d-block p-2 bg-dark text-white">
+        <div id="sandwich-heading" class="row heading_bar">
+            <h3 class="col-6">Desserts</h3>
+            <h3 class="col-2">Quantity</h3>
+            <h3 class="col-2">x Unit Price</h3>
+            <h3 class="col-2">Totals</h3>
+        </div>
+        <div id="sandwich-heading" class="row item_bar">
+            <p class="col-6">Sundae - Vanilla ice-cream with chocolate syrup and a cherry.</p>
+            <input type="number" name="item7" id="item7" onfocusout="calculate_all()" class="form-control col-2" name="item_1">
+            <p class="col-2 price">X 4.75</p>
+            <input type="text" id="item7_total" class="form-control col-2" disabled>
+        </div>
+        <div id="sandwich-heading" class="row item_bar">
+            <p class="col-6">Brownie Sundae - Vanilla ice-cream with chocolate syrup and a cherry on top of a warm brownie.</p>
+            <input type="number" name="item8" id="item8" onfocusout="calculate_all()" class="form-control col-2" name="item_1">
+            <p class="col-2 price">X 5.50</p>
+            <input type="text" id="item8_total" class="form-control col-2" disabled>
+        </div>
+        <div id="sandwich-heading" class="row item_bar">
+            <p class="col-6">Freshly Baked Pie - A slice of warm pie. Flavors include cherry, blueberry, and apple.</p>
+            <input type="number" name="item9" id="item9" onfocusout="calculate_all()" class="form-control col-2" name="item_1">
+            <p class="col-2 price">X 4.50</p>
+            <input type="text" id="item9_total" class="form-control col-2" disabled>
+        </div>
+        </span>
+
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-2 info">Products Subtotal</div>
+            <input id="product_subtotal" type="text" class="form-control col-2 product_subtotal" disabled>
+        </div>
+
+        <div class="row heading_bar" id="data-heading">
+            <div class="col-5"></div>
+            <h3 class="col-2">Total Qty</h3>
+            <h3 class="col-3">x Shipping Rate</h3>
+            <h3 class="col-2">Shipping Total</h3>
+        </div>
+
+        <div class="row" id="data-heading">
+            <div class="col-5"></div>
+            <input type="text" id="total_qty" class="form-control col-2" disabled>
+            <h3 class="col-3">x 10.00</h3>
+            <input type="text" id="shipping_total" class="form-control col-2 product_subtotal" disabled>
+        </div>
+
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-2 info">ORDER TOTAL</div>
+            <input type="text" id="order_total" class="form-control col-2 product_subtotal" disabled>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="calculate.js"></script>
+  </body>
+</html>
